@@ -28,5 +28,12 @@ public class formController {
 // 		return repository.save(obj);
 // 	}
 
+	// 	@PostMapping("/form")
+
+// 	public Form create(@RequestBody Form obj) {
+
+// 		return repository.save(obj);
+
+// 	}
 
 }
