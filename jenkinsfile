@@ -2,7 +2,7 @@ node
 {
    stage('Preparation') 
    { 
-      git 'https://github.com/MeghanaNettem2/devpractice'
+      git 'https://github.com/jayanthikr91/Assignment2.git'
 
    }
    stage('Build')
