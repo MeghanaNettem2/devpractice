@@ -13,4 +13,5 @@ stage('SonarQube analysis')
     { 
          sh 'mvn sonar:sonar -Dsonar.host.url=http://my40867dns.eastus2.cloudapp.azure.com' 
      }
+ 
 }
