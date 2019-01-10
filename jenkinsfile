@@ -9,9 +9,13 @@ node
    {
           sh "mvn clean install" 
    }
-stage('SonarQube analysis') 
+   stage('SonarQube analysis') 
     { 
          sh 'mvn sonar:sonar -Dsonar.host.url=http://my40867dns.eastus2.cloudapp.azure.com' 
      }
+     
+    stage('deploy'){
+      sh '''cp /var/lib/jenkins/workspace/samplebuild/target/Helloworld.war   /home/minduseradmin/apache-tomcat-8.5.35/webapps'''  
+    }
  
 }
