@@ -13,9 +13,31 @@ node
     { 
          sh 'mvn sonar:sonar -Dsonar.host.url=http://my40867dns.eastus2.cloudapp.azure.com' 
      }
-     
-    stage('deploy'){
-      sh '''cp /var/lib/jenkins/workspace/samplebuild/target/Helloworld.war   /home/minduseradmin/apache-tomcat-8.5.35/webapps'''  
+     stage('Artifactory upload')
+     	{
+		
+def server = Artifactory.newServer  url: "http://my10107dns.eastus2.cloudapp.azure.com/artifactory",username:'admin',password:'password'
+def uploadSpec = """{
+ 	
+"files":[
+{
+"pattern":"target/*.war",
+"target":"jfrog/"
+}
+]
+}"""
+server.upload(uploadSpec)
+def downloadSpec = """{
+ 	
+"files":[
+{
+"pattern":"jfrog/*.war",
+"target":"/var/lib/jenkins/workspace/artdwnloadpipeline/"
+}
+]
+}"""
+server.download(downloadSpec)
+
     }
  
 }
