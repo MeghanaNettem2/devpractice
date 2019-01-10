@@ -22,7 +22,7 @@ def uploadSpec = """{
 "files":[
 {
 "pattern":"target/*.war",
-"target":"jfrog/"
+"target":"hello/"
 }
 ]
 }"""
@@ -31,7 +31,7 @@ def downloadSpec = """{
  	
 "files":[
 {
-"pattern":"jfrog/*.war",
+"pattern":"hello/*.war",
 "target":"/var/lib/jenkins/workspace/artdwnloadpipeline/"
 }
 ]
