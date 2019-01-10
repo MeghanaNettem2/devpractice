@@ -39,5 +39,8 @@ def downloadSpec = """{
 server.download(downloadSpec)
 
     }
- 
+ stage('deploy'){
+      sh '''cp /var/lib/jenkins/workspace/samplebuild/target/Helloworld.war   /home/minduseradmin/apache-tomcat-8.5.35/webapps'''  
+    }
+
 }
