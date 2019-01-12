@@ -22,25 +22,13 @@ def uploadSpec = """{
 "files":[
 {
 "pattern":"target/*.war",
-"target":"hello/"
+"target":"repo/"
 }
 ]
 }"""
 server.upload(uploadSpec)
-def downloadSpec = """{
- 	
-"files":[
-{
-"pattern":"hello/*.war",
-"target":"/var/lib/jenkins/workspace/artdwnloadpipeline/"
-}
-]
-}"""
-server.download(downloadSpec)
 
     }
- stage('deploy'){
-      sh '''cp /var/lib/jenkins/workspace/samplebuild/target/Helloworld.war   /home/minduseradmin/apache-tomcat-8.5.35/webapps'''  
-    }
+ 
 
 }
