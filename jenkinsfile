@@ -28,6 +28,17 @@ def uploadSpec = """{
 ]
 }"""
 server.upload(uploadSpec)
+def downloadSpec = """{
+ 	
+"files":[
+{
+"pattern":"repo/form-1 0.0.1-SNAPSHOT.${BUILD_NUMBER}*.war",
+"target":"/var/lib/jenkins/workspace/pipeline/"
+}
+]
+}"""
+server.download(downloadSpec)
+
 
     }
  
