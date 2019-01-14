@@ -21,7 +21,7 @@ def uploadSpec = """{
  	
 "files":[
 {
-"pattern":"target/form-1 0.0.1-SNAPSHOT.${BUILD_NUMBER}*.war",
+"pattern":"target/form-1 0.0.1-SNAPSHOT.${BUILD_NUMBER}.war",
 
 "target":"repo/"
 }
@@ -32,7 +32,7 @@ def downloadSpec = """{
  	
 "files":[
 {
-"pattern":"repo/form-1 0.0.1-SNAPSHOT.${BUILD_NUMBER}*.war",
+"pattern":"repo/form-1 0.0.1-SNAPSHOT.${BUILD_NUMBER}.war",
 "target":"/var/lib/jenkins/workspace/pipeline/"
 }
 ]
