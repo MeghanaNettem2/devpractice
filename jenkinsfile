@@ -21,7 +21,7 @@ def uploadSpec = """{
  	
 "files":[
 {
-"pattern":"target/*.war",
+"pattern":"target/Helloworld Maven Webapp-SNAPSHOT-0.0.${BUILD_NUMBER}*.war",
 "target":"repo/"
 }
 ]
