@@ -2,7 +2,7 @@ node
 {
    stage('Preparation') 
    { 
-      git 'https://github.com/jayanthikr91/Assignment2.git'
+      git 'https://github.com/MeghanaNettem2/devpractice.git'
 
    }
    stage('Build')
@@ -21,7 +21,8 @@ def uploadSpec = """{
  	
 "files":[
 {
-"pattern":"target/Helloworld Maven Webapp-SNAPSHOT-0.0.${BUILD_NUMBER}*.war",
+"pattern":"target/form-1-SNAPSHOT-0.0.${BUILD_NUMBER}*.war",
+
 "target":"repo/"
 }
 ]
