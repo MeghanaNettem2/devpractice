@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>form-1</artifactId>
-	<version>SNAPSHOT-1.2.${v}</version>
+	<version>SNAPSHOT-0.0.${v}</version>
 	<packaging>war</packaging>
 
 
