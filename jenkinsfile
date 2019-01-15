@@ -32,6 +32,6 @@ server.upload(uploadSpec)
     }
  
 stage('email'){
-    emailext body: 'sending email notification msg', subject: 'email notification', to: 'kushiraj97@gmail.com'
+    emailext body: 'sending email notification msg', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
    }
 }
