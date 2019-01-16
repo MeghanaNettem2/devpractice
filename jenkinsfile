@@ -47,4 +47,5 @@ stage('email'){
          failure {  
             emailext body: 'Build is failure', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
          } 
+	 }
 }
