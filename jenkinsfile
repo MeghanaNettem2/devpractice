@@ -1,6 +1,8 @@
 node
 {
     emailext body: 'Build is started', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
+    try{
+    
    stage('Preparation') 
    { 
       git 'https://github.com/MeghanaNettem2/devpractice.git'
@@ -37,16 +39,9 @@ sh 'scp  /var/lib/jenkins/workspace/sample3/target/form-1-SNAPSHOT-0.0.${BUILD_N
 }
 stage('email'){
     emailext body: 'Build is successful', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
+   }catch(err){
+   emailext body: 'Build is failure', subject: 'failure', to: 'sweetynmeghana@gmail.com'
+   
    }
-   post {  
-         always {  
-             echo 'This will always run'  
-         }  
-         success {  
-             echo 'This will run only if successful'  
-         }  
-         failure {  
-            emailext body: 'Build is failure', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
-         } 
-	 }
+   
 }
