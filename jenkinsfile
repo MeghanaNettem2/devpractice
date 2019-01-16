@@ -37,4 +37,14 @@ sh 'scp  /var/lib/jenkins/workspace/sample3/target/form-1-SNAPSHOT-0.0.${BUILD_N
 stage('email'){
     emailext body: 'Build is successful', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
    }
+   post {  
+         always {  
+             echo 'This will always run'  
+         }  
+         success {  
+             echo 'This will run only if successful'  
+         }  
+         failure {  
+            emailext body: 'Build is failure', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
+         } 
 }
