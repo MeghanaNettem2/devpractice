@@ -1,5 +1,6 @@
-node 
+pipeline
 {
+mailext body: 'Build is started', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
    stage('Preparation') 
    { 
       git 'https://github.com/MeghanaNettem2/devpractice.git'
