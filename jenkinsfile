@@ -35,6 +35,6 @@ server.upload(uploadSpec)
 sh 'scp  /var/lib/jenkins/workspace/sample3/target/form-1-SNAPSHOT-0.0.${BUILD_NUMBER}.war  ec2-user@ec2-18-221-55-68.us-east-2.compute.amazonaws.com:/var/lib/tomcat/webapps'
 }
 stage('email'){
-    emailext body: 'sending email notification msg', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
+    emailext body: 'Build is successful', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
    }
 }
