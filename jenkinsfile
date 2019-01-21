@@ -19,14 +19,14 @@ node
      stage('Artifactory upload')
      	{
 		
-def server = Artifactory.newServer  url: "http://my16083dns.eastus2.cloudapp.azure.com:9002/artifactory",username:'admin',password:'password'
+def server = Artifactory.newServer  url: "http://my16083dns.eastus2.cloudapp.azure.com:8088/artifactory",username:'admin',password:'password'
 def uploadSpec = """{
  	
 "files":[
 {
 "pattern":"target/*.war",
 
-"target":"arti/"
+"target":"artifact/"
 }
 ]
 }"""
