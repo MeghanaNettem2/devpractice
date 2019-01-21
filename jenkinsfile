@@ -1,6 +1,6 @@
 node
 {
-    emailext body: 'Build is started', subject: 'email notification', to: 'Ranjitha.Nagraj2@mindtree.com'
+    emailext body: 'Build is started', subject: 'email notification', to: 'Ranjitha.Nagaraj2@mindtree.com'
     try{
     
    stage('Preparation') 
