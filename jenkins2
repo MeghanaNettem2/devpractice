@@ -32,7 +32,7 @@ server.upload(uploadSpec)
     }
  stage ('Final deploy'){
 
-sh 'docker cp  /var/lib/jenkins/workspace/sample4/target/*.war  tom:/user/local/tomcat/webapps'
+sh 'docker cp  /var/lib/jenkins/workspace/sample4/target/*.war  tom:/usr/local/tomcat/webapps'
 }
 stage('email'){
     emailext body: 'Build is successful', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
