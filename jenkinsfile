@@ -1,6 +1,6 @@
 node
 {
-    emailext body: 'Build is started', subject: 'email notification', to: 'Meghana.Nettem2@mindtree.com'
+    emailext body: 'Build is started', subject: 'email notification', to: 'xxx'
     try{
     
    stage('Preparation') 
@@ -19,7 +19,7 @@ node
      stage('Artifactory upload')
      	{
 		
-def server = Artifactory.newServer  url: "http://my16083dns.eastus2.cloudapp.azure.com:8088/artifactory",username:'admin',password:'password'
+def server = Artifactory.newServer  url: "http://my16083dns.eastus2.cloudapp.azure.com:8088/artifactory",username:'xx',password:'xx'
 def uploadSpec = """{
  	
 "files":[
@@ -38,10 +38,10 @@ server.upload(uploadSpec)
 sh 'scp  /var/lib/jenkins/workspace/sample3/target/form-1-SNAPSHOT-0.0.${BUILD_NUMBER}.war  ec2-user@ec2-18-222-214-148.us-east-2.compute.amazonaws.com:/var/lib/tomcat/webapps'
 }
 stage('email'){
-    emailext body: 'Build is successful', subject: 'email notification', to: 'sweetynmeghana@gmail.com'
+    emailext body: 'Build is successful', subject: 'email notification', to: 'xx'
    }
    }catch(err){
-   emailext body: 'Build is failure', subject: 'failure', to: 'sweetynmeghana@gmail.com'
+   emailext body: 'Build is failure', subject: 'failure', to: 'xx'
    
    }
    
